@@ -77,7 +77,7 @@ class TransactionsPage {
     if (!options) return;
     this.lastOption = options;
     Account.get(options.account_id, null, (response)=>{ 
-      
+      console.log(response);
     });
     Transaction.list(options, (response)=>{
       console.log(response);
@@ -101,7 +101,6 @@ class TransactionsPage {
    * */
   renderTitle( name ) {
     this.element.querySelector( '.content-title' ).textContent = name;
-
   }
 
   /**

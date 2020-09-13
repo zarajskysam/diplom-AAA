@@ -46,13 +46,12 @@ class AccountsWidget {
     if (User.current){
       Account.list( User.current(), response => {
         this.clear();
-        console.log(response)
+        console.log(response);
         // response.data.map( item => this.renderItem( item ));
-        let i = [];
         for (let key in response) {
-         i.push(response[key]);
+         this.renderItem(response[key]);
         }
-        console.log(i);
+        
       })
     }   
   }

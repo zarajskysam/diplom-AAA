@@ -56,7 +56,7 @@ class Entity {
       url: this.URL,
       data: data,
       method: 'GET',
-      
+      responseType: 'json',
       callback: ( response, err ) => {
         this.get1 = response;
       }

@@ -75,7 +75,7 @@
       "email": "aaaa@aaaa.ru",
       "password": "aaaa4141",
       "id": "86x184d64kevemtzy",
-      "isAuthorized": false
+      "isAuthorized": true
     },
     {
       "name": "aaaaa",
@@ -96,7 +96,7 @@
       "email": "aa@aa.ru",
       "password": "aaaa4141",
       "id": "86x1848rgkf10l61z",
-      "isAuthorized": true
+      "isAuthorized": false
     }
   ],
   "accounts": [
@@ -914,6 +914,111 @@
       "name": "Семен Зарайский",
       "user_id": "86x1848rgkf10l61z",
       "id": "86x184f4kkf139oyw"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x1841nckf13quke"
+    },
+    {
+      "name": "вапвап",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184750kf13qxkz"
+    },
+    {
+      "name": "Вакансии",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184fowkf13r7jo"
+    },
+    {
+      "name": "Семен Зарайский",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184ddwkf13sb92"
+    },
+    {
+      "name": "Вакансии",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184fe4kf13xjuz"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184dzkkf14e3zu"
+    },
+    {
+      "name": "A. Zarayskaya",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184hgkf14et9g"
+    },
+    {
+      "name": "Семен Зарайский",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x18459gkf14n9ei"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x1845ackf14nq8j"
+    },
+    {
+      "name": "Семен Зарайский",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x1843pckf14ofap"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184ad4kf14oqvu"
+    },
+    {
+      "name": "A. Zarayskaya",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x18451gkf14pmla"
+    },
+    {
+      "name": "Семен Зарайский",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x18438kf14ubra"
+    },
+    {
+      "name": "A. Zarayskaya",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184df8kf14umho"
+    },
+    {
+      "name": "A. Zarayskaya",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184930kf14xgn6"
+    },
+    {
+      "name": "A. Zarayskaya",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184298kf14xznn"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x1848lgkf1508nu"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x184ba4kf151no2"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x1847mwkf151vt4"
+    },
+    {
+      "name": "sdfsdf",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x1848j8kf15201f"
+    },
+    {
+      "name": "A. Zarayskaya",
+      "user_id": "86x184d64kevemtzy",
+      "id": "86x1849kokf1531xp"
     }
   ],
   "transactions": [
@@ -1171,6 +1276,14 @@
       "sum": 435345,
       "account_id": "86x184628kf139cjc",
       "created_at": "2020-09-13T12:42:49.424Z"
+    },
+    {
+      "id": "86x184cikkf14ykfk",
+      "type": "EXPENSE",
+      "name": "213",
+      "sum": 2312,
+      "account_id": "86x184d54kf0vktup",
+      "created_at": "2020-09-13T13:30:14.383Z"
     }
   ]
 }
