@@ -12,7 +12,7 @@ class Entity {
 
   static URL = '';
 
-  constructor(list) {
+  constructor(list1, get1) {
     this.list1 = list1;
     this.get1 = get1;
   }
@@ -23,10 +23,8 @@ class Entity {
       data: data,
       method: 'GET',
       responseType: 'json',
-      callback: ( response, err ) => {
-        this.list1 = response.data;
-      }
-   }, callback(this.list1));
+      callback: callback
+   });
   }
 
   /**
@@ -41,10 +39,8 @@ class Entity {
       data: data,
       method: 'POST',
       responseType: 'json',
-      callback: ( response, err ) => {
-        
-      }
-   }, callback());
+      callback: callback
+   });
   }
 
   /**
@@ -53,14 +49,12 @@ class Entity {
    * */
   static get( id = '', data, callback = f => f ) {
     return createRequest({
-      url: this.URL,
+      url: this.URL + `/${id}`,
       data: data,
       method: 'GET',
       responseType: 'json',
-      callback: ( response, err ) => {
-        this.get1 = response;
-      }
-   }, callback(this.get1));
+      callback: callback
+   });
   }
 
   /**
@@ -68,15 +62,14 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static remove( id = '', data, callback = f => f ) {
-    data._method = 'DELETE'
+    data._method = 'DELETE';
     return createRequest({
       url: this.URL,
       data: data,
       method: 'POST',
-      callback: ( response, err ) => {
-        
-      }
-   }, callback());
+      responseType: 'json',
+      callback: callback
+   });
   }
 }
 

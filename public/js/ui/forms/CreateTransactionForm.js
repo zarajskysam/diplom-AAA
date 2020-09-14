@@ -21,8 +21,8 @@ class CreateTransactionForm extends AsyncForm {
     this.select = this.element.querySelector('.accounts-select');
     Account.list( User.current(), response => {
       this.select.innerHTML = '';
-      for (let key in response) {
-        this.select.insertAdjacentHTML('beforeend', `<option value="${ response[key].id }">${ response[key].name }</option>`);
+      for (let key in response.data) {
+        this.select.insertAdjacentHTML('beforeend', `<option value="${ response.data[key].id }">${ response.data[key].name }</option>`);
       }
     });
   }
@@ -34,7 +34,7 @@ class CreateTransactionForm extends AsyncForm {
    * в котором находится форма
    * */
   onSubmit( options ) {
-    Transaction.create( options, () => {
+    Transaction.create( options, (response) => {
       this.element.reset();
       new Modal( this.element.closest( '.modal' )).close();
       App.update();

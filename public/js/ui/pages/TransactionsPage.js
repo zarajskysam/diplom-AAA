@@ -31,9 +31,15 @@ class TransactionsPage {
    * TransactionsPage.removeAccount соответственно
    * */
   registerEvents() {
-    const removeAccount = this.element.querySelector( '.remove-account' );
-    this.element.addEventListener( 'click', event => this.removeTransaction( event.target.closest( '.transaction__remove' )));
-    removeAccount.addEventListener( 'click', this.removeAccount.bind( this ));
+    const removeAccountButton = this.element.querySelector('.remove-account');
+    removeAccountButton.addEventListener( 'click', ()=>{
+      this.removeAccount();
+    });
+    this.element.addEventListener('click', (e)=>{
+      if (e.target.classList.contains('transaction__remove')) {
+        this.removeTransaction(e.target.getAttribute('data-id'));
+      }
+    })
   }
 
   /**
@@ -45,12 +51,15 @@ class TransactionsPage {
    * для обновления приложения
    * */
   removeAccount() {
-    if ( !this.lastOptions ) return;
-    const result = confirm( 'Вы действительно хотите удалить счёт?' );
-    if ( !result ) return;
-    const data = new FormData();
-    data.id = this.lastOptions.account_id;
-    Account.remove( '', data, () => App.update() );
+    if (this.lastOption) {
+      const result = confirm( 'Вы действительно хотите удалить счёт?' );
+      let data = this.lastOption.account_id;
+      let data1 = new FormData();
+      data1.id = data;
+      Account.remove( '', data1, () => {
+        App.update();
+      });
+    };
   }
 
   /**
@@ -58,13 +67,17 @@ class TransactionsPage {
    * подтверждеия действия (с помощью confirm()).
    * По удалению транзакции вызовите метод App.update()
    * */
-  removeTransaction( id ) {
-    if (!element) return;
-    const result = confirm('Вы действительно хотите удалить эту транзакцию?');
-    if ( !result ) return;
-    const data = new FormData();
-    data.append( 'id', element.dataset.id );
-    Transaction.remove( '', data, App.update.bind( App ));
+  removeTransaction( element ) {
+    if (element) {
+      const result = confirm( 'Вы действительно хотите удалить транзакцию?' );
+      console.log(element);
+      let data1 = new FormData();
+      data1.id = element;
+      console.log(data1);
+      Transaction.remove( '', data1, (response) => {
+        App.update();
+      });
+    }
   }
 
   /**
@@ -77,11 +90,10 @@ class TransactionsPage {
     if (!options) return;
     this.lastOption = options;
     Account.get(options.account_id, null, (response)=>{ 
-      console.log(response);
+      this.renderTitle(response.data.name);
     });
     Transaction.list(options, (response)=>{
-      console.log(response);
-      this.renderTransactions(response);
+      this.renderTransactions(response.data);
     });
   }
 
