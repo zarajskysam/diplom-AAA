@@ -96,6 +96,20 @@
       "email": "aa@aa.ru",
       "password": "aaaa4141",
       "id": "86x1848rgkf10l61z",
+      "isAuthorized": false
+    },
+    {
+      "name": "Авось",
+      "email": "asdasdasd@gmail.com",
+      "password": "aaa4141",
+      "id": "4zq4t4kf2h5opp",
+      "isAuthorized": true
+    },
+    {
+      "name": "Авось",
+      "email": "asd44@mail.ru",
+      "password": "aaaa4141",
+      "id": "4zqd0kf2h7jkl",
       "isAuthorized": true
     }
   ],
@@ -1019,6 +1033,11 @@
       "name": "Профильные смены",
       "user_id": "86x1848rgkf10l61z",
       "id": "4zqazokf2gcogs"
+    },
+    {
+      "name": "Семен",
+      "user_id": "4zq4t4kf2h5opp",
+      "id": "4zq9vskf2h7nfy"
     }
   ],
   "transactions": [
@@ -1300,6 +1319,14 @@
       "sum": 123124,
       "account_id": "86x184f4kkf139oyw",
       "created_at": "2020-09-14T11:37:03.667Z"
+    },
+    {
+      "id": "4zqc88kf2h7uvu",
+      "type": "INCOME",
+      "name": "вапвап",
+      "sum": 435345,
+      "account_id": "4zq9vskf2h7nfy",
+      "created_at": "2020-09-14T12:01:09.401Z"
     }
   ]
 }

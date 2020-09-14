@@ -84,7 +84,7 @@ class User {
       data: data,
       responseType: 'json',
       method: 'POST',
-      callback: ( response, err ) => {
+      callback: ( response, user ) => {
         if(response.success) {
           this.user = user;
           this.setCurrent(user);
