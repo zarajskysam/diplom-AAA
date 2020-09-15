@@ -12,10 +12,6 @@ class Entity {
 
   static URL = '';
 
-  constructor(list1, get1) {
-    this.list1 = list1;
-    this.get1 = get1;
-  }
 
   static list( data, callback = f => f) {
     return createRequest({
